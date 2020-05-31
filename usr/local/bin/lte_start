@@ -1,6 +1,8 @@
 #!/bin/sh
 
-umbim -d /dev/cdc-wdm0 -n radio
+# fcc
+#umbim -d /dev/cdc-wdm0 -n radio
 mbim-network /dev/cdc-wdm0 start
-mbimcli -d /dev/cdc-wdm0 -p --query-ip-configuration | \
-mbimcli_ip_parser -a
+#mbimcli -d /dev/cdc-wdm0 -p --query-ip-configuration | \
+mbimcli -d /dev/cdc-wdm0 --query-ip-configuration=0  --no-open=11 --no-close | \
+./mbimcli_ip_parser -a
