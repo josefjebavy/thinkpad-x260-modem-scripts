@@ -1,6 +1,9 @@
 #!/bin/sh
 
-# fcc
+# 1) reset modem !
+# 2) set  fcc mode
+# 3) run this script
+
 #umbim -d /dev/cdc-wdm0 -n radio
 mbim-network /dev/cdc-wdm0 start
 #mbimcli -d /dev/cdc-wdm0 -p --query-ip-configuration | \
