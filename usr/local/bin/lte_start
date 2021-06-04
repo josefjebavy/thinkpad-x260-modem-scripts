@@ -2,6 +2,7 @@
 
 # 1) reset modem !
 # 2) set  fcc mode
+qmicli  -d /dev/cdc-wdm0  --dms-set-fcc-authentication
 # 3) run this script
 
 #umbim -d /dev/cdc-wdm0 -n radio
